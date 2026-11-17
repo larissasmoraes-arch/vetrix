@@ -1,0 +1,328 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços | VETRIX</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background:
+                linear-gradient(rgba(15, 45, 32, 0.65), rgba(15, 45, 32, 0.65)),
+                url("https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?auto=format&fit=crop&w=2000&q=85")
+                center/cover fixed;
+            color: #ffffff;
+            min-height: 100vh;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 18px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #26734d;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #e77f9a;
+        }
+
+        main {
+            padding: 45px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 5px #222;
+        }
+
+        .introducao {
+            font-size: 18px;
+            margin-bottom: 35px;
+            text-shadow: 1px 1px 4px #222;
+        }
+
+        .lista-servicos {
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .servico {
+            background: rgba(232, 248, 237, 0.96);
+            color: #245c3c;
+            border: 2px solid #b9e4c5;
+            border-radius: 18px;
+            padding: 25px 15px;
+            min-height: 120px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+        }
+
+        .servico:hover {
+            background: #fce1e8;
+            border-color: #eea3b7;
+            transform: translateY(-5px);
+        }
+
+        .icone {
+            display: block;
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        .janela {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            z-index: 1000;
+        }
+
+        .conteudo-janela {
+            background: #ffffff;
+            color: #355744;
+            padding: 30px;
+            border-radius: 22px;
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            animation: aparecer 0.3s ease;
+        }
+
+        .conteudo-janela h2 {
+            color: #26734d;
+        }
+
+        .fechar {
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            border: none;
+            background: none;
+            color: #26734d;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .patinha {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .botao-fechar {
+            background: #f4b5c5;
+            color: #53313b;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .botao-fechar:hover {
+            background: #ed93aa;
+        }
+
+        footer {
+            background: rgba(255, 255, 255, 0.95);
+            color: #26734d;
+            text-align: center;
+            padding: 18px;
+            margin-top: 35px;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 750px) {
+            .lista-servicos {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            body {
+                background-attachment: scroll;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .lista-servicos {
+                grid-template-columns: 1fr;
+            }
+
+            .servico {
+                min-height: 95px;
+            }
+
+            nav {
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav class="menu">
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre nós</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="missao.html">Missão</a>
+        <a href="valores.html">Valores</a>
+        <a href="cadastro.html">Cadastro</a>
+        <a href="htmlChat.html" class="ativo">Assistente virtual</a>
+    </nav>
+</header>
+
+<main>
+    <h1>Nossos serviços 🐾</h1>
+    <p class="introducao">
+        Cuidar de quem você ama é nossa prioridade!
+        Clique em um serviço para saber mais.
+    </p>
+
+    <div class="lista-servicos">
+
+        <button class="servico" onclick="abrirServico('Telemedicina veterinária', 'Uma proposta de atendimento on-line para tirar dúvidas e receber orientações gerais sobre a saúde do seu pet.')">
+            <span class="icone">🩺</span>
+            Telemedicina veterinária
+        </button>
+
+        <button class="servico" onclick="abrirServico('Saúde preventiva', 'Conheça cuidados preventivos e lembretes para acompanhar vacinas, consultas e a saúde do seu animal.')">
+            <span class="icone">💚</span>
+            Saúde preventiva
+        </button>
+
+        <button class="servico" onclick="abrirServico('Nutrição animal', 'Receba informações gerais sobre alimentação equilibrada para ajudar seu pet a ter mais qualidade de vida.')">
+            <span class="icone">🥣</span>
+            Nutrição animal
+        </button>
+
+        <button class="servico" onclick="abrirServico('Comportamento animal', 'Aprenda a compreender os hábitos do seu pet e conheça dicas para melhorar a convivência com ele.')">
+            <span class="icone">🐶</span>
+            Comportamento animal
+        </button>
+
+        <button class="servico" onclick="abrirServico('Agenda veterinária', 'Organize consultas, vacinas e lembretes importantes para não esquecer os cuidados com seu companheiro.')">
+            <span class="icone">📅</span>
+            Agenda veterinária
+        </button>
+
+        <button class="servico" onclick="abrirServico('Cuidados com gatos', 'Veja dicas sobre higiene, alimentação, brincadeiras e bem-estar para cuidar melhor dos seus felinos.')">
+            <span class="icone">🐱</span>
+            Cuidados com gatos
+        </button>
+
+        <button class="servico" onclick="abrirServico('Higiene do pet', 'Conheça cuidados básicos com banho, escovação e higiene para manter seu animal confortável.')">
+            <span class="icone">🧼</span>
+            Higiene do pet
+        </button>
+
+        <button class="servico" onclick="abrirServico('Identificação do pet', 'Organize informações importantes do seu animal para ajudar na identificação caso ele se perca.')">
+            <span class="icone">📍</span>
+            Identificação do pet
+        </button>
+
+        <button class="servico" onclick="abrirServico('Orientações de emergência', 'Conheça informações básicas para reconhecer situações preocupantes e procurar atendimento veterinário rapidamente.')">
+            <span class="icone">🚨</span>
+            Orientações de emergência
+        </button>
+
+    </div>
+</main>
+
+<div class="janela" id="janelaServico" onclick="fecharFora(event)">
+    <div class="conteudo-janela">
+        <button class="fechar" onclick="fecharServico()" aria-label="Fechar">×</button>
+
+        <div class="patinha">💗🐾</div>
+        <h2 id="tituloServico"></h2>
+        <p id="descricaoServico"></p>
+
+        <button class="botao-fechar" onclick="fecharServico()">
+            Entendi!
+        </button>
+    </div>
+</div>
+
+<footer>
+    <p>Desenvolvido por Larissa | SENAI</p>
+    <p>larissa.s.moraes@edu.senai.br</p>
+</footer>
+
+<script>
+    function abrirServico(titulo, descricao) {
+        document.getElementById("tituloServico").textContent = titulo;
+        document.getElementById("descricaoServico").textContent = descricao;
+        document.getElementById("janelaServico").style.display = "flex";
+    }
+
+    function fecharServico() {
+        document.getElementById("janelaServico").style.display = "none";
+    }
+
+    function fecharFora(evento) {
+        if (evento.target.id === "janelaServico") {
+            fecharServico();
+        }
+    }
+
+    document.addEventListener("keydown", function(evento) {
+        if (evento.key === "Escape") {
+            fecharServico();
+        }
+    });
+</script>
+
+</body>
+</html>

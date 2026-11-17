@@ -1,0 +1,406 @@
+/* CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --menta: #d9f3e9;
+    --verde: #078f83;
+    --verde-escuro: #244c43;
+    --pessego: #fff0e8;
+    --rosa: #f5b8a5;
+    --branco: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--pessego);
+    color: var(--verde-escuro);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* CABEÇALHO FIXO */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 15px 5%;
+    background: var(--menta);
+    box-shadow: 0 3px 12px #244c4320;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--verde);
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 10px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: var(--rosa);
+    color: var(--verde-escuro);
+}
+
+/* BANNER COM IMAGEM DE FUNDO */
+.banner {
+    min-height: 380px;
+    padding: 70px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: var(--branco);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    isolation: isolate;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+        90deg,
+        rgba(15, 49, 41, 0.82),
+        rgba(15, 49, 41, 0.18)
+    );
+}
+
+.banner h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    max-width: 750px;
+    margin-bottom: 15px;
+    line-height: 1.15;
+}
+
+.banner p {
+    font-size: 19px;
+    max-width: 650px;
+}
+
+/* UMA IMAGEM DIFERENTE PARA CADA PÁGINA */
+.pagina-inicio .banner {
+    background-image: url("https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=1800&q=85");
+}
+
+.pagina-sobre .banner {
+    background-image: url("https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?auto=format&fit=crop&w=1800&q=85");
+}
+
+.pagina-servicos .banner {
+    background-image: url("https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1800&q=85");
+}
+
+.pagina-missao .banner {
+    background-image: url("https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=1800&q=85");
+}
+
+.pagina-valores .banner {
+    background-image: url("https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=1800&q=85");
+}
+
+.pagina-cadastro .banner {
+    background-image: url("https://images.unsplash.com/photo-1576201836106-db1758fd1c97?auto=format&fit=crop&w=1800&q=85");
+}
+
+/* CONTEÚDO */
+.container {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    padding: 45px 0;
+}
+
+.container h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.container > p {
+    margin-bottom: 20px;
+}
+
+.secao-verde {
+    background: var(--menta);
+    padding: 35px;
+    border-radius: 20px;
+    margin: 25px 0;
+}
+
+.secao-rosa {
+    background: var(--pessego);
+    padding: 35px;
+    border-radius: 20px;
+    margin: 25px 0;
+}
+
+.secao-clara {
+    background: var(--branco);
+    padding: 35px;
+    border-radius: 20px;
+    margin: 25px 0;
+}
+
+/* CARTÕES */
+.cartoes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.cartao {
+    background: var(--branco);
+    border: 2px solid var(--menta);
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 5px 15px #244c4310;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cartao:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px #244c4320;
+}
+
+.cartao h3 {
+    color: var(--verde);
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+/* BOTÕES */
+.botao {
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+    border-radius: 28px;
+    background: var(--verde);
+    color: var(--branco);
+    padding: 13px 23px;
+    margin-top: 18px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background: var(--verde-escuro);
+    transform: translateY(-2px);
+}
+
+.botao-pessego {
+    background: var(--rosa);
+    color: var(--verde-escuro);
+}
+
+/* FOTOS DENTRO DAS PÁGINAS */
+.foto {
+    width: 100%;
+    max-height: 360px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+}
+
+.duas-colunas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 30px;
+    margin: 25px 0;
+}
+
+/* LISTA DE VALORES */
+.lista-valores {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+    list-style: none;
+    margin-top: 20px;
+}
+
+.lista-valores li {
+    background: var(--branco);
+    border-left: 5px solid var(--verde);
+    padding: 18px;
+    border-radius: 10px;
+}
+
+/* FORMULÁRIO */
+.formulario {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 30px;
+    background: var(--branco);
+    border-radius: 20px;
+    box-shadow: 0 5px 20px #244c4315;
+}
+
+.campo {
+    margin-bottom: 18px;
+}
+
+.campo label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 13px;
+    border: 2px solid #c8e5da;
+    border-radius: 10px;
+    font: inherit;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    outline: 2px solid var(--verde);
+}
+
+.checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.checkbox input {
+    margin-top: 7px;
+}
+
+#mensagem {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* CHAMADA FINAL */
+.cta {
+    text-align: center;
+    background: var(--rosa);
+    padding: 40px 8%;
+}
+
+.cta h2 {
+    margin-bottom: 10px;
+}
+
+/* RODAPÉ */
+footer {
+    text-align: center;
+    background: var(--verde-escuro);
+    color: var(--branco);
+    padding: 25px 15px;
+}
+
+footer a {
+    color: var(--menta);
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* CELULARES E TABLETS */
+@media (max-width: 800px) {
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .cartoes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .duas-colunas {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 540px) {
+    .logo {
+        font-size: 23px;
+    }
+
+    nav {
+        gap: 5px;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 7px;
+    }
+
+    .banner {
+        min-height: 320px;
+        padding: 45px 6%;
+        background-position: 60% center;
+    }
+
+    .banner h1 {
+        font-size: 34px;
+    }
+
+    .banner p {
+        font-size: 17px;
+    }
+
+    .cartoes,
+    .lista-valores {
+        grid-template-columns: 1fr;
+    }
+
+    .secao-verde,
+    .secao-rosa,
+    .secao-clara,
+    .formulario {
+        padding: 22px;
+    }
+
+    .container h2 {
+        font-size: 26px;
+    }
+}
