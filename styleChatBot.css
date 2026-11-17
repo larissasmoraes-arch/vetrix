@@ -1,0 +1,366 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f3f8f4;
+    color: #315b43;
+}
+
+/* CABEÇALHO */
+
+.topo {
+    background: white;
+    padding: 18px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-bottom: 3px solid #d9eddf;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.marca span {
+    font-size: 35px;
+}
+
+.marca h1 {
+    color: #26734d;
+    font-size: 35px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.topo p {
+    color: #52966d;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* MENU */
+
+
+
+
+
+
+.menu {
+    background: #26734d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 17px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 11px 18px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background: #4c9b6b;
+    transform: translateY(-2px);
+}
+
+.menu a.ativo {
+    background: #4c9b6b;
+}
+
+/* APRESENTAÇÃO */
+
+.apresentacao {
+    text-align: center;
+    padding: 45px 20px 30px;
+    background: linear-gradient(135deg, #e5f4e9, #f8fcf9);
+}
+
+.icone-principal {
+    font-size: 45px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.apresentacao h2 {
+    color: #26734d;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.apresentacao h3 {
+    color: #52966d;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.apresentacao p {
+    color: #748579;
+    font-size: 14px;
+    max-width: 600px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+/* CARTÃO DO CHAT */
+
+.container {
+    width: 90%;
+    max-width: 720px;
+    margin: 30px auto 55px;
+    padding: 30px;
+    background: white;
+    border-radius: 24px;
+    border-top: 6px solid #76b88a;
+    box-shadow: 0 12px 35px rgba(30, 90, 55, 0.12);
+}
+
+/* TÍTULO DO CHAT */
+
+.titulo-chat {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.icone-chat {
+    background: #e5f4e9;
+    padding: 13px;
+    border-radius: 15px;
+    font-size: 30px;
+}
+
+.titulo-chat h2 {
+    color: #26734d;
+    font-size: 21px;
+}
+
+.titulo-chat p {
+    color: #829087;
+    font-size: 12px;
+}
+
+/* STATUS */
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 13px;
+    color: #26734d;
+    margin-bottom: 12px;
+}
+
+.bolinha {
+    width: 10px;
+    height: 10px;
+    background: #36b875;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #36b875;
+}
+
+/* CONVERSA */
+
+.conversa {
+    height: 320px;
+    overflow-y: auto;
+    background: #f3faf5;
+    border: 1px solid #dcebe1;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.conversa::-webkit-scrollbar {
+    width: 7px;
+}
+
+.conversa::-webkit-scrollbar-thumb {
+    background: #a7cbb3;
+    border-radius: 10px;
+}
+
+/* MENSAGENS */
+
+.mensagem {
+    max-width: 85%;
+    padding: 14px 17px;
+    margin-bottom: 14px;
+    border-radius: 15px;
+    font-size: 14px;
+    line-height: 1.7;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.bot {
+    background: #e4f3e9;
+    color: #285c40;
+    margin-right: auto;
+    border-bottom-left-radius: 3px;
+}
+
+.usuario {
+    background: #26734d;
+    color: white;
+    margin-left: auto;
+    border-bottom-right-radius: 3px;
+}
+
+/* CAMPOS */
+
+label {
+    display: block;
+    color: #315b43;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.campo-api {
+    margin-bottom: 22px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1.5px solid #d8e7dc;
+    border-radius: 12px;
+    background: #f8fcf9;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 95px;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #36a36b;
+    box-shadow: 0 0 0 4px rgba(44, 149, 96, 0.12);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #a4b1a8;
+}
+
+/* BOTÃO */
+
+button {
+    width: 100%;
+    padding: 16px;
+    margin-top: 15px;
+    background: linear-gradient(135deg, #26734d, #36a36b);
+    color: white;
+    border: none;
+    border-radius: 13px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover:not(:disabled) {
+    background: linear-gradient(135deg, #43885d, #64ae7d);
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+/* STATUS DA MENSAGEM */
+
+#statusMensagem {
+    text-align: center;
+    color: #26734d;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+/* RODAPÉ */
+
+footer {
+    background: #1d5639;
+    text-align: center;
+    padding: 28px 15px;
+    color: white;
+}
+
+footer h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+footer p {
+    font-size: 12px;
+    margin-top: 5px;
+    color: #e0f0e4;
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .topo {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .menu {
+        gap: 5px;
+        padding: 12px 5px;
+    }
+
+    .menu a {
+        font-size: 11px;
+        padding: 9px 10px;
+    }
+
+    .apresentacao h2 {
+        font-size: 23px;
+    }
+
+    .apresentacao h3 {
+        font-size: 17px;
+    }
+
+    .container {
+        padding: 20px 15px;
+    }
+
+    .titulo-chat h2 {
+        font-size: 18px;
+    }
+
+    .conversa {
+        height: 280px;
+    }
+}

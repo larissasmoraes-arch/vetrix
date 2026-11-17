@@ -1,0 +1,607 @@
+
+/* CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --menta: #d9f3e9;
+    --verde: #078f83;
+    --verde-escuro: #244c43;
+    --pessego: #fff0e8;
+    --rosa: #f5b8a5;
+    --branco: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--pessego);
+    color: var(--verde-escuro);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* CABEÇALHO */
+.topo {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    padding: 15px 5%;
+    background: var(--menta);
+
+    box-shadow: 0 3px 12px #244c4320;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--verde);
+    text-decoration: none;
+}
+
+/* MENU */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 10px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background: var(--rosa);
+    color: var(--verde-escuro);
+}
+
+.menu .botao-chat {
+    background: var(--verde);
+    color: white;
+}
+
+.menu .botao-chat:hover {
+    background: var(--verde-escuro);
+}
+
+/* BANNER INICIAL COM IMAGEM DE CACHORRO */
+.pagina-inicio .inicio {
+    min-height: 570px;
+    padding: 75px 8%;
+
+    display: flex;
+    align-items: center;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(255, 240, 232, 0.97) 0%,
+            rgba(255, 240, 232, 0.88) 43%,
+            rgba(255, 240, 232, 0.12) 100%
+        ),
+        url("https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+}
+
+.conteudo {
+    width: 100%;
+    max-width: 680px;
+}
+
+/* ETIQUETA */
+.etiqueta {
+    display: inline-block;
+    padding: 9px 16px;
+    margin-bottom: 18px;
+
+    background: var(--menta);
+    color: var(--verde-escuro);
+
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+/* TÍTULO PRINCIPAL */
+.inicio h1 {
+    color: var(--verde-escuro);
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1.12;
+    margin-bottom: 18px;
+}
+
+.inicio h1 span {
+    color: var(--verde);
+}
+
+/* TEXTO PRINCIPAL */
+.inicio p {
+    max-width: 610px;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+/* BOTÕES DO BANNER */
+.botoes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+/* BOTÃO PRINCIPAL */
+.botao {
+    display: inline-block;
+
+    text-decoration: none;
+    border: none;
+    border-radius: 28px;
+
+    background: var(--verde);
+    color: var(--branco);
+
+    padding: 13px 23px;
+    margin-top: 18px;
+
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background: var(--verde-escuro);
+    transform: translateY(-2px);
+}
+
+/* BOTÃO SECUNDÁRIO */
+.botao-secundario {
+    display: inline-block;
+    padding: 12px 18px;
+
+    color: var(--verde-escuro);
+    font-weight: bold;
+    text-decoration: none;
+
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.botao-secundario:hover {
+    background: var(--menta);
+}
+
+/* SEÇÕES DA PÁGINA INICIAL */
+.pagina-inicio .secao {
+    padding: 48px 8%;
+    text-align: center;
+}
+
+.secao h2 {
+    color: var(--verde-escuro);
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.secao > p {
+    max-width: 850px;
+    margin: 0 auto;
+    font-size: 17px;
+}
+
+/* SEÇÃO DE VALORES */
+.valores {
+    background: #fffaf6;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+
+    max-width: 1100px;
+    margin: 25px auto 0;
+}
+
+.card {
+    padding: 25px;
+
+    background: var(--branco);
+    border: 2px solid var(--menta);
+    border-radius: 18px;
+
+    box-shadow: 0 6px 18px rgba(36, 76, 67, 0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: var(--verde);
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+/* SEÇÃO DO ASSISTENTE */
+.assistente {
+    background: var(--menta);
+    padding-top: 42px;
+    padding-bottom: 48px;
+}
+
+/* BANNER DAS OUTRAS PÁGINAS */
+.banner {
+    min-height: 380px;
+    padding: 70px 8%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    color: var(--branco);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+    isolation: isolate;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background: linear-gradient(
+        90deg,
+        rgba(15, 49, 41, 0.82),
+        rgba(15, 49, 41, 0.18)
+    );
+}
+
+.banner h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    max-width: 750px;
+    margin-bottom: 15px;
+    line-height: 1.15;
+}
+
+.banner p {
+    font-size: 19px;
+    max-width: 650px;
+}
+
+/* IMAGENS DAS OUTRAS PÁGINAS */
+.pagina-sobre .banner {
+    background-image: url("https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?auto=format&fit=crop&w=1800&q=85");
+}
+
+.pagina-servicos .banner {
+    background-image: url("https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1800&q=85");
+}
+
+.pagina-missao .banner {
+    background-image: url("https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=1800&q=85");
+}
+
+.pagina-valores .banner {
+    background-image: url("https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=1800&q=85");
+}
+
+.pagina-cadastro .banner {
+    background-image: url("https://images.unsplash.com/photo-1576201836106-db1758fd1c97?auto=format&fit=crop&w=1800&q=85");
+}
+
+/* CONTEÚDO DAS OUTRAS PÁGINAS */
+.container {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    padding: 45px 0;
+}
+
+.container h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.container > p {
+    margin-bottom: 20px;
+}
+
+.secao-verde {
+    background: var(--menta);
+    padding: 35px;
+    border-radius: 20px;
+    margin: 25px 0;
+}
+
+.secao-rosa {
+    background: var(--pessego);
+    padding: 35px;
+    border-radius: 20px;
+    margin: 25px 0;
+}
+
+.secao-clara {
+    background: var(--branco);
+    padding: 35px;
+    border-radius: 20px;
+    margin: 25px 0;
+}
+
+/* CARTÕES DAS OUTRAS PÁGINAS */
+.cartoes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.cartao {
+    background: var(--branco);
+    border: 2px solid var(--menta);
+    border-radius: 18px;
+    padding: 25px;
+
+    box-shadow: 0 5px 15px #244c4310;
+    transition: 0.2s;
+}
+
+.cartao:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px #244c4320;
+}
+
+.cartao h3 {
+    color: var(--verde);
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+/* FOTOS DENTRO DAS PÁGINAS */
+.foto {
+    width: 100%;
+    max-height: 360px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+}
+
+.duas-colunas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 30px;
+    margin: 25px 0;
+}
+
+/* LISTA DE VALORES */
+.lista-valores {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+
+    list-style: none;
+    margin-top: 20px;
+}
+
+.lista-valores li {
+    background: var(--branco);
+    border-left: 5px solid var(--verde);
+    padding: 18px;
+    border-radius: 10px;
+}
+
+/* FORMULÁRIO */
+.formulario {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 30px;
+
+    background: var(--branco);
+    border-radius: 20px;
+
+    box-shadow: 0 5px 20px #244c4315;
+}
+
+.campo {
+    margin-bottom: 18px;
+}
+
+.campo label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 13px;
+
+    border: 2px solid #c8e5da;
+    border-radius: 10px;
+    font: inherit;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    outline: 2px solid var(--verde);
+}
+
+.checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.checkbox input {
+    margin-top: 7px;
+}
+
+#mensagem {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* CHAMADA FINAL */
+.cta {
+    text-align: center;
+    background: var(--rosa);
+    padding: 40px 8%;
+}
+
+.cta h2 {
+    margin-bottom: 10px;
+}
+
+/* RODAPÉ */
+footer {
+    text-align: center;
+    background: var(--verde-escuro);
+    color: var(--branco);
+    padding: 25px 15px;
+}
+
+footer a {
+    color: var(--menta);
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* TABLETS */
+@media (max-width: 800px) {
+
+    .topo {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .menu {
+        justify-content: center;
+    }
+
+    .cards,
+    .cartoes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .duas-colunas {
+        grid-template-columns: 1fr;
+    }
+
+    .inicio {
+        background-position: 65% center;
+    }
+}
+
+/* CELULARES */
+@media (max-width: 540px) {
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .menu {
+        gap: 5px;
+        justify-content: center;
+    }
+
+    .menu a {
+        font-size: 13px;
+        padding: 7px;
+    }
+
+    .pagina-inicio .inicio {
+        min-height: 500px;
+        padding: 45px 6%;
+
+        background-image:
+            linear-gradient(
+                90deg,
+                rgba(255, 240, 232, 0.96),
+                rgba(255, 240, 232, 0.75)
+            ),
+            url("https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=1200&q=85");
+
+        background-position: 65% center;
+    }
+
+    .inicio h1 {
+        font-size: 34px;
+    }
+
+    .inicio p {
+        font-size: 16px;
+    }
+
+    .cards,
+    .cartoes,
+    .lista-valores {
+        grid-template-columns: 1fr;
+    }
+
+    .secao-verde,
+    .secao-rosa,
+    .secao-clara,
+    .formulario {
+        padding: 22px;
+    }
+
+    .container h2 {
+        font-size: 26px;
+    }
+
+    .banner {
+        min-height: 320px;
+        padding: 45px 6%;
+        background-position: 60% center;
+    }
+
+    .banner h1 {
+        font-size: 34px;
+    }
+
+    .banner p {
+        font-size: 17px;
+    }
+}
+

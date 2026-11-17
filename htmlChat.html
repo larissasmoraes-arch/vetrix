@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VETRIX | Assistente Virtual</title>
+
+    <link rel="stylesheet" href="styleChatBot.css">
+    <script src="scriptChat.js" defer></script>
+</head>
+
+<body>
+
+    <header class="topo">
+        <a href="index.html" class="marca">
+            <span>🐾</span>
+            <h1>VETRIX</h1>
+        </a>
+
+        <p>O amanhã também tem patas.</p>
+    </header>
+
+   <nav class="menu">
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre nós</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="missao.html">Missão</a>
+        <a href="valores.html">Valores</a>
+        <a href="cadastro.html">Cadastro</a>
+        <a href="htmlChat.html" class="ativo">Assistente virtual</a>
+    </nav>
+
+    <section class="apresentacao">
+        <span class="icone-principal">🐶💚</span>
+
+        <h2>Tem dúvidas sobre seu pet?</h2>
+
+        <h3>Converse com nosso assistente virtual!</h3>
+
+        <p>
+            Estamos aqui para ajudar você com informações,
+            cuidados e orientações para seu melhor amigo.
+        </p>
+    </section>
+
+    <main class="container">
+
+        <div class="titulo-chat">
+            <div class="icone-chat">🐾</div>
+
+            <div>
+                <h2>Assistente VETRIX</h2>
+                <p>Seu companheiro virtual de informações</p>
+            </div>
+        </div>
+
+        <div class="status">
+            <span class="bolinha"></span>
+            Assistente virtual disponível
+        </div>
+
+        <div id="conversa" class="conversa">
+            <div class="mensagem bot">
+                Olá! Seja bem-vindo à VETRIX! 💚🐾
+
+                Tem alguma dúvida sobre seu pet?
+                Estou aqui para ajudar!
+            </div>
+        </div>
+
+        <div class="campo-api">
+            <label for="apiKey">Chave da API:</label>
+
+            <input
+                type="password"
+                id="apiKey"
+                placeholder="Insira sua chave da API"
+                autocomplete="off"
+            >
+        </div>
+
+        <form id="formChat">
+
+            <label for="mensagem">Escreva sua dúvida:</label>
+
+            <textarea
+                id="mensagem"
+                placeholder="Ex: Quais cuidados devo ter com meu cachorro?"
+                rows="3"
+                required
+            ></textarea>
+
+            <button type="submit" id="botaoEnviar">
+                Enviar mensagem 🐾
+            </button>
+
+        </form>
+
+        <p id="statusMensagem"></p>
+
+    </main>
+
+    <footer>
+        <h3>VETRIX 🐾</h3>
+        <p>O amanhã também tem patas.</p>
+        <p>© 2026 - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
+
+
+
+
